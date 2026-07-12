@@ -1,0 +1,1976 @@
+{
+  "course": "amharic",
+  "display_name": "Amharic",
+  "audio_strategy": "tts",
+  "tts_locale": "am-ET",
+  "families": [
+    {
+      "key": "h",
+      "label": "h",
+      "forms": [
+        "ሀ",
+        "ሁ",
+        "ሂ",
+        "ሃ",
+        "ሄ",
+        "ህ",
+        "ሆ"
+      ],
+      "romanized": [
+        "hä",
+        "hu",
+        "hi",
+        "ha",
+        "he",
+        "hə",
+        "ho"
+      ]
+    },
+    {
+      "key": "l",
+      "label": "l",
+      "forms": [
+        "ለ",
+        "ሉ",
+        "ሊ",
+        "ላ",
+        "ሌ",
+        "ል",
+        "ሎ"
+      ],
+      "romanized": [
+        "lä",
+        "lu",
+        "li",
+        "la",
+        "le",
+        "lə",
+        "lo"
+      ]
+    },
+    {
+      "key": "m",
+      "label": "m",
+      "forms": [
+        "መ",
+        "ሙ",
+        "ሚ",
+        "ማ",
+        "ሜ",
+        "ም",
+        "ሞ"
+      ],
+      "romanized": [
+        "mä",
+        "mu",
+        "mi",
+        "ma",
+        "me",
+        "mə",
+        "mo"
+      ]
+    },
+    {
+      "key": "s",
+      "label": "s",
+      "forms": [
+        "ሰ",
+        "ሱ",
+        "ሲ",
+        "ሳ",
+        "ሴ",
+        "ስ",
+        "ሶ"
+      ],
+      "romanized": [
+        "sä",
+        "su",
+        "si",
+        "sa",
+        "se",
+        "sə",
+        "so"
+      ]
+    },
+    {
+      "key": "r",
+      "label": "r",
+      "forms": [
+        "ረ",
+        "ሩ",
+        "ሪ",
+        "ራ",
+        "ሬ",
+        "ር",
+        "ሮ"
+      ],
+      "romanized": [
+        "rä",
+        "ru",
+        "ri",
+        "ra",
+        "re",
+        "rə",
+        "ro"
+      ]
+    },
+    {
+      "key": "b",
+      "label": "b",
+      "forms": [
+        "በ",
+        "ቡ",
+        "ቢ",
+        "ባ",
+        "ቤ",
+        "ብ",
+        "ቦ"
+      ],
+      "romanized": [
+        "bä",
+        "bu",
+        "bi",
+        "ba",
+        "be",
+        "bə",
+        "bo"
+      ]
+    },
+    {
+      "key": "t",
+      "label": "t",
+      "forms": [
+        "ተ",
+        "ቱ",
+        "ቲ",
+        "ታ",
+        "ቴ",
+        "ት",
+        "ቶ"
+      ],
+      "romanized": [
+        "tä",
+        "tu",
+        "ti",
+        "ta",
+        "te",
+        "tə",
+        "to"
+      ]
+    },
+    {
+      "key": "n",
+      "label": "n",
+      "forms": [
+        "ነ",
+        "ኑ",
+        "ኒ",
+        "ና",
+        "ኔ",
+        "ን",
+        "ኖ"
+      ],
+      "romanized": [
+        "nä",
+        "nu",
+        "ni",
+        "na",
+        "ne",
+        "nə",
+        "no"
+      ]
+    },
+    {
+      "key": "'",
+      "label": "a",
+      "forms": [
+        "አ",
+        "ኡ",
+        "ኢ",
+        "ኣ",
+        "ኤ",
+        "እ",
+        "ኦ"
+      ],
+      "romanized": [
+        "ä",
+        "u",
+        "i",
+        "a",
+        "e",
+        "ə",
+        "o"
+      ]
+    },
+    {
+      "key": "k",
+      "label": "k",
+      "forms": [
+        "ከ",
+        "ኩ",
+        "ኪ",
+        "ካ",
+        "ኬ",
+        "ክ",
+        "ኮ"
+      ],
+      "romanized": [
+        "kä",
+        "ku",
+        "ki",
+        "ka",
+        "ke",
+        "kə",
+        "ko"
+      ]
+    },
+    {
+      "key": "w",
+      "label": "w",
+      "forms": [
+        "ወ",
+        "ዉ",
+        "ዊ",
+        "ዋ",
+        "ዌ",
+        "ው",
+        "ዎ"
+      ],
+      "romanized": [
+        "wä",
+        "wu",
+        "wi",
+        "wa",
+        "we",
+        "wə",
+        "wo"
+      ]
+    },
+    {
+      "key": "d",
+      "label": "d",
+      "forms": [
+        "ደ",
+        "ዱ",
+        "ዲ",
+        "ዳ",
+        "ዴ",
+        "ድ",
+        "ዶ"
+      ],
+      "romanized": [
+        "dä",
+        "du",
+        "di",
+        "da",
+        "de",
+        "də",
+        "do"
+      ]
+    },
+    {
+      "key": "y",
+      "label": "y",
+      "forms": [
+        "የ",
+        "ዩ",
+        "ዪ",
+        "ያ",
+        "ዬ",
+        "ይ",
+        "ዮ"
+      ],
+      "romanized": [
+        "yä",
+        "yu",
+        "yi",
+        "ya",
+        "ye",
+        "yə",
+        "yo"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "am_g_h1",
+      "glyph": "ሀ",
+      "transliteration": "hä",
+      "audio_path": "am/g_h1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 1
+    },
+    {
+      "id": "am_g_h2",
+      "glyph": "ሁ",
+      "transliteration": "hu",
+      "audio_path": "am/g_h2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 2
+    },
+    {
+      "id": "am_g_h3",
+      "glyph": "ሂ",
+      "transliteration": "hi",
+      "audio_path": "am/g_h3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 3
+    },
+    {
+      "id": "am_g_h4",
+      "glyph": "ሃ",
+      "transliteration": "ha",
+      "audio_path": "am/g_h4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 4
+    },
+    {
+      "id": "am_g_h5",
+      "glyph": "ሄ",
+      "transliteration": "he",
+      "audio_path": "am/g_h5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 5
+    },
+    {
+      "id": "am_g_h6",
+      "glyph": "ህ",
+      "transliteration": "hə",
+      "audio_path": "am/g_h6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 6
+    },
+    {
+      "id": "am_g_h7",
+      "glyph": "ሆ",
+      "transliteration": "ho",
+      "audio_path": "am/g_h7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "h",
+      "order": 7
+    },
+    {
+      "id": "am_g_l1",
+      "glyph": "ለ",
+      "transliteration": "lä",
+      "audio_path": "am/g_l1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 1
+    },
+    {
+      "id": "am_g_l2",
+      "glyph": "ሉ",
+      "transliteration": "lu",
+      "audio_path": "am/g_l2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 2
+    },
+    {
+      "id": "am_g_l3",
+      "glyph": "ሊ",
+      "transliteration": "li",
+      "audio_path": "am/g_l3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 3
+    },
+    {
+      "id": "am_g_l4",
+      "glyph": "ላ",
+      "transliteration": "la",
+      "audio_path": "am/g_l4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 4
+    },
+    {
+      "id": "am_g_l5",
+      "glyph": "ሌ",
+      "transliteration": "le",
+      "audio_path": "am/g_l5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 5
+    },
+    {
+      "id": "am_g_l6",
+      "glyph": "ል",
+      "transliteration": "lə",
+      "audio_path": "am/g_l6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 6
+    },
+    {
+      "id": "am_g_l7",
+      "glyph": "ሎ",
+      "transliteration": "lo",
+      "audio_path": "am/g_l7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "l",
+      "order": 7
+    },
+    {
+      "id": "am_g_m1",
+      "glyph": "መ",
+      "transliteration": "mä",
+      "audio_path": "am/g_m1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 1
+    },
+    {
+      "id": "am_g_m2",
+      "glyph": "ሙ",
+      "transliteration": "mu",
+      "audio_path": "am/g_m2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 2
+    },
+    {
+      "id": "am_g_m3",
+      "glyph": "ሚ",
+      "transliteration": "mi",
+      "audio_path": "am/g_m3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 3
+    },
+    {
+      "id": "am_g_m4",
+      "glyph": "ማ",
+      "transliteration": "ma",
+      "audio_path": "am/g_m4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 4
+    },
+    {
+      "id": "am_g_m5",
+      "glyph": "ሜ",
+      "transliteration": "me",
+      "audio_path": "am/g_m5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 5
+    },
+    {
+      "id": "am_g_m6",
+      "glyph": "ም",
+      "transliteration": "mə",
+      "audio_path": "am/g_m6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 6
+    },
+    {
+      "id": "am_g_m7",
+      "glyph": "ሞ",
+      "transliteration": "mo",
+      "audio_path": "am/g_m7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "m",
+      "order": 7
+    },
+    {
+      "id": "am_g_s1",
+      "glyph": "ሰ",
+      "transliteration": "sä",
+      "audio_path": "am/g_s1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 1
+    },
+    {
+      "id": "am_g_s2",
+      "glyph": "ሱ",
+      "transliteration": "su",
+      "audio_path": "am/g_s2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 2
+    },
+    {
+      "id": "am_g_s3",
+      "glyph": "ሲ",
+      "transliteration": "si",
+      "audio_path": "am/g_s3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 3
+    },
+    {
+      "id": "am_g_s4",
+      "glyph": "ሳ",
+      "transliteration": "sa",
+      "audio_path": "am/g_s4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 4
+    },
+    {
+      "id": "am_g_s5",
+      "glyph": "ሴ",
+      "transliteration": "se",
+      "audio_path": "am/g_s5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 5
+    },
+    {
+      "id": "am_g_s6",
+      "glyph": "ስ",
+      "transliteration": "sə",
+      "audio_path": "am/g_s6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 6
+    },
+    {
+      "id": "am_g_s7",
+      "glyph": "ሶ",
+      "transliteration": "so",
+      "audio_path": "am/g_s7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "s",
+      "order": 7
+    },
+    {
+      "id": "am_g_r1",
+      "glyph": "ረ",
+      "transliteration": "rä",
+      "audio_path": "am/g_r1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 1
+    },
+    {
+      "id": "am_g_r2",
+      "glyph": "ሩ",
+      "transliteration": "ru",
+      "audio_path": "am/g_r2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 2
+    },
+    {
+      "id": "am_g_r3",
+      "glyph": "ሪ",
+      "transliteration": "ri",
+      "audio_path": "am/g_r3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 3
+    },
+    {
+      "id": "am_g_r4",
+      "glyph": "ራ",
+      "transliteration": "ra",
+      "audio_path": "am/g_r4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 4
+    },
+    {
+      "id": "am_g_r5",
+      "glyph": "ሬ",
+      "transliteration": "re",
+      "audio_path": "am/g_r5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 5
+    },
+    {
+      "id": "am_g_r6",
+      "glyph": "ር",
+      "transliteration": "rə",
+      "audio_path": "am/g_r6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 6
+    },
+    {
+      "id": "am_g_r7",
+      "glyph": "ሮ",
+      "transliteration": "ro",
+      "audio_path": "am/g_r7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "r",
+      "order": 7
+    },
+    {
+      "id": "am_g_b1",
+      "glyph": "በ",
+      "transliteration": "bä",
+      "audio_path": "am/g_b1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 1
+    },
+    {
+      "id": "am_g_b2",
+      "glyph": "ቡ",
+      "transliteration": "bu",
+      "audio_path": "am/g_b2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 2
+    },
+    {
+      "id": "am_g_b3",
+      "glyph": "ቢ",
+      "transliteration": "bi",
+      "audio_path": "am/g_b3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 3
+    },
+    {
+      "id": "am_g_b4",
+      "glyph": "ባ",
+      "transliteration": "ba",
+      "audio_path": "am/g_b4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 4
+    },
+    {
+      "id": "am_g_b5",
+      "glyph": "ቤ",
+      "transliteration": "be",
+      "audio_path": "am/g_b5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 5
+    },
+    {
+      "id": "am_g_b6",
+      "glyph": "ብ",
+      "transliteration": "bə",
+      "audio_path": "am/g_b6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 6
+    },
+    {
+      "id": "am_g_b7",
+      "glyph": "ቦ",
+      "transliteration": "bo",
+      "audio_path": "am/g_b7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "b",
+      "order": 7
+    },
+    {
+      "id": "am_g_t1",
+      "glyph": "ተ",
+      "transliteration": "tä",
+      "audio_path": "am/g_t1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 1
+    },
+    {
+      "id": "am_g_t2",
+      "glyph": "ቱ",
+      "transliteration": "tu",
+      "audio_path": "am/g_t2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 2
+    },
+    {
+      "id": "am_g_t3",
+      "glyph": "ቲ",
+      "transliteration": "ti",
+      "audio_path": "am/g_t3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 3
+    },
+    {
+      "id": "am_g_t4",
+      "glyph": "ታ",
+      "transliteration": "ta",
+      "audio_path": "am/g_t4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 4
+    },
+    {
+      "id": "am_g_t5",
+      "glyph": "ቴ",
+      "transliteration": "te",
+      "audio_path": "am/g_t5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 5
+    },
+    {
+      "id": "am_g_t6",
+      "glyph": "ት",
+      "transliteration": "tə",
+      "audio_path": "am/g_t6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 6
+    },
+    {
+      "id": "am_g_t7",
+      "glyph": "ቶ",
+      "transliteration": "to",
+      "audio_path": "am/g_t7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "t",
+      "order": 7
+    },
+    {
+      "id": "am_g_n1",
+      "glyph": "ነ",
+      "transliteration": "nä",
+      "audio_path": "am/g_n1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 1
+    },
+    {
+      "id": "am_g_n2",
+      "glyph": "ኑ",
+      "transliteration": "nu",
+      "audio_path": "am/g_n2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 2
+    },
+    {
+      "id": "am_g_n3",
+      "glyph": "ኒ",
+      "transliteration": "ni",
+      "audio_path": "am/g_n3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 3
+    },
+    {
+      "id": "am_g_n4",
+      "glyph": "ና",
+      "transliteration": "na",
+      "audio_path": "am/g_n4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 4
+    },
+    {
+      "id": "am_g_n5",
+      "glyph": "ኔ",
+      "transliteration": "ne",
+      "audio_path": "am/g_n5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 5
+    },
+    {
+      "id": "am_g_n6",
+      "glyph": "ን",
+      "transliteration": "nə",
+      "audio_path": "am/g_n6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 6
+    },
+    {
+      "id": "am_g_n7",
+      "glyph": "ኖ",
+      "transliteration": "no",
+      "audio_path": "am/g_n7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "n",
+      "order": 7
+    },
+    {
+      "id": "am_g_glottal1",
+      "glyph": "አ",
+      "transliteration": "ä",
+      "audio_path": "am/g_glottal1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 1
+    },
+    {
+      "id": "am_g_glottal2",
+      "glyph": "ኡ",
+      "transliteration": "u",
+      "audio_path": "am/g_glottal2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 2
+    },
+    {
+      "id": "am_g_glottal3",
+      "glyph": "ኢ",
+      "transliteration": "i",
+      "audio_path": "am/g_glottal3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 3
+    },
+    {
+      "id": "am_g_glottal4",
+      "glyph": "ኣ",
+      "transliteration": "a",
+      "audio_path": "am/g_glottal4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 4
+    },
+    {
+      "id": "am_g_glottal5",
+      "glyph": "ኤ",
+      "transliteration": "e",
+      "audio_path": "am/g_glottal5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 5
+    },
+    {
+      "id": "am_g_glottal6",
+      "glyph": "እ",
+      "transliteration": "ə",
+      "audio_path": "am/g_glottal6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 6
+    },
+    {
+      "id": "am_g_glottal7",
+      "glyph": "ኦ",
+      "transliteration": "o",
+      "audio_path": "am/g_glottal7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "'",
+      "order": 7
+    },
+    {
+      "id": "am_g_k1",
+      "glyph": "ከ",
+      "transliteration": "kä",
+      "audio_path": "am/g_k1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 1
+    },
+    {
+      "id": "am_g_k2",
+      "glyph": "ኩ",
+      "transliteration": "ku",
+      "audio_path": "am/g_k2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 2
+    },
+    {
+      "id": "am_g_k3",
+      "glyph": "ኪ",
+      "transliteration": "ki",
+      "audio_path": "am/g_k3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 3
+    },
+    {
+      "id": "am_g_k4",
+      "glyph": "ካ",
+      "transliteration": "ka",
+      "audio_path": "am/g_k4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 4
+    },
+    {
+      "id": "am_g_k5",
+      "glyph": "ኬ",
+      "transliteration": "ke",
+      "audio_path": "am/g_k5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 5
+    },
+    {
+      "id": "am_g_k6",
+      "glyph": "ክ",
+      "transliteration": "kə",
+      "audio_path": "am/g_k6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 6
+    },
+    {
+      "id": "am_g_k7",
+      "glyph": "ኮ",
+      "transliteration": "ko",
+      "audio_path": "am/g_k7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "k",
+      "order": 7
+    },
+    {
+      "id": "am_g_w1",
+      "glyph": "ወ",
+      "transliteration": "wä",
+      "audio_path": "am/g_w1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 1
+    },
+    {
+      "id": "am_g_w2",
+      "glyph": "ዉ",
+      "transliteration": "wu",
+      "audio_path": "am/g_w2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 2
+    },
+    {
+      "id": "am_g_w3",
+      "glyph": "ዊ",
+      "transliteration": "wi",
+      "audio_path": "am/g_w3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 3
+    },
+    {
+      "id": "am_g_w4",
+      "glyph": "ዋ",
+      "transliteration": "wa",
+      "audio_path": "am/g_w4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 4
+    },
+    {
+      "id": "am_g_w5",
+      "glyph": "ዌ",
+      "transliteration": "we",
+      "audio_path": "am/g_w5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 5
+    },
+    {
+      "id": "am_g_w6",
+      "glyph": "ው",
+      "transliteration": "wə",
+      "audio_path": "am/g_w6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 6
+    },
+    {
+      "id": "am_g_w7",
+      "glyph": "ዎ",
+      "transliteration": "wo",
+      "audio_path": "am/g_w7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "w",
+      "order": 7
+    },
+    {
+      "id": "am_g_d1",
+      "glyph": "ደ",
+      "transliteration": "dä",
+      "audio_path": "am/g_d1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 1
+    },
+    {
+      "id": "am_g_d2",
+      "glyph": "ዱ",
+      "transliteration": "du",
+      "audio_path": "am/g_d2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 2
+    },
+    {
+      "id": "am_g_d3",
+      "glyph": "ዲ",
+      "transliteration": "di",
+      "audio_path": "am/g_d3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 3
+    },
+    {
+      "id": "am_g_d4",
+      "glyph": "ዳ",
+      "transliteration": "da",
+      "audio_path": "am/g_d4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 4
+    },
+    {
+      "id": "am_g_d5",
+      "glyph": "ዴ",
+      "transliteration": "de",
+      "audio_path": "am/g_d5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 5
+    },
+    {
+      "id": "am_g_d6",
+      "glyph": "ድ",
+      "transliteration": "də",
+      "audio_path": "am/g_d6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 6
+    },
+    {
+      "id": "am_g_d7",
+      "glyph": "ዶ",
+      "transliteration": "do",
+      "audio_path": "am/g_d7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "d",
+      "order": 7
+    },
+    {
+      "id": "am_g_y1",
+      "glyph": "የ",
+      "transliteration": "yä",
+      "audio_path": "am/g_y1.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 1
+    },
+    {
+      "id": "am_g_y2",
+      "glyph": "ዩ",
+      "transliteration": "yu",
+      "audio_path": "am/g_y2.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 2
+    },
+    {
+      "id": "am_g_y3",
+      "glyph": "ዪ",
+      "transliteration": "yi",
+      "audio_path": "am/g_y3.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 3
+    },
+    {
+      "id": "am_g_y4",
+      "glyph": "ያ",
+      "transliteration": "ya",
+      "audio_path": "am/g_y4.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 4
+    },
+    {
+      "id": "am_g_y5",
+      "glyph": "ዬ",
+      "transliteration": "ye",
+      "audio_path": "am/g_y5.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 5
+    },
+    {
+      "id": "am_g_y6",
+      "glyph": "ይ",
+      "transliteration": "yə",
+      "audio_path": "am/g_y6.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 6
+    },
+    {
+      "id": "am_g_y7",
+      "glyph": "ዮ",
+      "transliteration": "yo",
+      "audio_path": "am/g_y7.mp3",
+      "english_gloss": null,
+      "grammar_tag": "glyph",
+      "difficulty_tier": 2,
+      "family_group": "y",
+      "order": 7
+    },
+    {
+      "id": "am_w_selam",
+      "glyph": "ሰላም",
+      "transliteration": "sälam",
+      "audio_path": "am/w_selam.mp3",
+      "english_gloss": "hello / peace",
+      "grammar_tag": "greeting",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_bet",
+      "glyph": "ቤት",
+      "transliteration": "bet",
+      "audio_path": "am/w_bet.mp3",
+      "english_gloss": "house",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_weha",
+      "glyph": "ውሃ",
+      "transliteration": "wəha",
+      "audio_path": "am/w_weha.mp3",
+      "english_gloss": "water",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_sem",
+      "glyph": "ስም",
+      "transliteration": "səm",
+      "audio_path": "am/w_sem.mp3",
+      "english_gloss": "name",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_leb",
+      "glyph": "ልብ",
+      "transliteration": "ləbb",
+      "audio_path": "am/w_leb.mp3",
+      "english_gloss": "heart",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_ber",
+      "glyph": "በር",
+      "transliteration": "bärr",
+      "audio_path": "am/w_ber.mp3",
+      "english_gloss": "door",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_dabo",
+      "glyph": "ዳቦ",
+      "transliteration": "dabbo",
+      "audio_path": "am/w_dabo.mp3",
+      "english_gloss": "bread",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_enat",
+      "glyph": "እናት",
+      "transliteration": "ənnat",
+      "audio_path": "am/w_enat.mp3",
+      "english_gloss": "mother",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_abat",
+      "glyph": "አባት",
+      "transliteration": "abbat",
+      "audio_path": "am/w_abat.mp3",
+      "english_gloss": "father",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_mar",
+      "glyph": "ማር",
+      "transliteration": "mar",
+      "audio_path": "am/w_mar.mp3",
+      "english_gloss": "honey",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_sew",
+      "glyph": "ሰው",
+      "transliteration": "säw",
+      "audio_path": "am/w_sew.mp3",
+      "english_gloss": "person",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_dem",
+      "glyph": "ደም",
+      "transliteration": "däm",
+      "audio_path": "am/w_dem.mp3",
+      "english_gloss": "blood",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_anbesa",
+      "glyph": "አንበሳ",
+      "transliteration": "anbässa",
+      "audio_path": "am/w_anbesa.mp3",
+      "english_gloss": "lion",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_kokeb",
+      "glyph": "ኮከብ",
+      "transliteration": "kokäb",
+      "audio_path": "am/w_kokeb.mp3",
+      "english_gloss": "star",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_mekina",
+      "glyph": "መኪና",
+      "transliteration": "mäkina",
+      "audio_path": "am/w_mekina.mp3",
+      "english_gloss": "car",
+      "grammar_tag": "noun",
+      "difficulty_tier": 1,
+      "family_group": null
+    },
+    {
+      "id": "am_w_arat",
+      "glyph": "አራት",
+      "transliteration": "aratt",
+      "audio_path": "am/w_arat.mp3",
+      "english_gloss": "four",
+      "grammar_tag": "number",
+      "difficulty_tier": 1,
+      "family_group": null
+    }
+  ],
+  "lessons": [
+    {
+      "id": "am_l1",
+      "title": "First words",
+      "subtitle": "Hear it, spot it",
+      "tier": 1,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem"
+      ],
+      "exercise_weights": {
+        "listen_select": 5,
+        "multiple_choice": 2
+      },
+      "length": 8
+    },
+    {
+      "id": "am_l2",
+      "title": "Everyday things",
+      "subtitle": "Sounds you already know",
+      "tier": 1,
+      "item_ids": [
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo"
+      ],
+      "exercise_weights": {
+        "listen_select": 5,
+        "multiple_choice": 2
+      },
+      "length": 8
+    },
+    {
+      "id": "am_l3",
+      "title": "People & home",
+      "subtitle": "Listening first",
+      "tier": 1,
+      "item_ids": [
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar"
+      ],
+      "exercise_weights": {
+        "listen_select": 5,
+        "multiple_choice": 2
+      },
+      "length": 8
+    },
+    {
+      "id": "am_l4",
+      "title": "More words",
+      "subtitle": "Build your ear–eye link",
+      "tier": 1,
+      "item_ids": [
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa"
+      ],
+      "exercise_weights": {
+        "listen_select": 5,
+        "multiple_choice": 2
+      },
+      "length": 8
+    },
+    {
+      "id": "am_l5",
+      "title": "Tier 1 checkpoint",
+      "subtitle": "Review everything so far",
+      "tier": 1,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa"
+      ],
+      "exercise_weights": {
+        "listen_select": 5,
+        "multiple_choice": 2
+      },
+      "length": 8
+    },
+    {
+      "id": "am_l6",
+      "title": "Family: ሀ · ለ",
+      "subtitle": "The 7 orders of ሀ · ለ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_h1",
+        "am_g_h2",
+        "am_g_h3",
+        "am_g_h4",
+        "am_g_h5",
+        "am_g_h6",
+        "am_g_h7",
+        "am_g_l1",
+        "am_g_l2",
+        "am_g_l3",
+        "am_g_l4",
+        "am_g_l5",
+        "am_g_l6",
+        "am_g_l7"
+      ],
+      "introduces_families": [
+        "h",
+        "l"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l7",
+      "title": "Family: መ · ሰ",
+      "subtitle": "The 7 orders of መ · ሰ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_m1",
+        "am_g_m2",
+        "am_g_m3",
+        "am_g_m4",
+        "am_g_m5",
+        "am_g_m6",
+        "am_g_m7",
+        "am_g_s1",
+        "am_g_s2",
+        "am_g_s3",
+        "am_g_s4",
+        "am_g_s5",
+        "am_g_s6",
+        "am_g_s7"
+      ],
+      "introduces_families": [
+        "m",
+        "s"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l8",
+      "title": "Family: ረ · በ",
+      "subtitle": "The 7 orders of ረ · በ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_r1",
+        "am_g_r2",
+        "am_g_r3",
+        "am_g_r4",
+        "am_g_r5",
+        "am_g_r6",
+        "am_g_r7",
+        "am_g_b1",
+        "am_g_b2",
+        "am_g_b3",
+        "am_g_b4",
+        "am_g_b5",
+        "am_g_b6",
+        "am_g_b7"
+      ],
+      "introduces_families": [
+        "r",
+        "b"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l9",
+      "title": "Family: ተ",
+      "subtitle": "The 7 orders of ተ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_t1",
+        "am_g_t2",
+        "am_g_t3",
+        "am_g_t4",
+        "am_g_t5",
+        "am_g_t6",
+        "am_g_t7"
+      ],
+      "introduces_families": [
+        "t"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l10",
+      "title": "Family: ነ",
+      "subtitle": "The 7 orders of ነ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_n1",
+        "am_g_n2",
+        "am_g_n3",
+        "am_g_n4",
+        "am_g_n5",
+        "am_g_n6",
+        "am_g_n7"
+      ],
+      "introduces_families": [
+        "n"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l11",
+      "title": "Family: አ",
+      "subtitle": "The 7 orders of አ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_glottal1",
+        "am_g_glottal2",
+        "am_g_glottal3",
+        "am_g_glottal4",
+        "am_g_glottal5",
+        "am_g_glottal6",
+        "am_g_glottal7"
+      ],
+      "introduces_families": [
+        "'"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l12",
+      "title": "Family: ከ",
+      "subtitle": "The 7 orders of ከ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_k1",
+        "am_g_k2",
+        "am_g_k3",
+        "am_g_k4",
+        "am_g_k5",
+        "am_g_k6",
+        "am_g_k7"
+      ],
+      "introduces_families": [
+        "k"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l13",
+      "title": "Family: ወ",
+      "subtitle": "The 7 orders of ወ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_w1",
+        "am_g_w2",
+        "am_g_w3",
+        "am_g_w4",
+        "am_g_w5",
+        "am_g_w6",
+        "am_g_w7"
+      ],
+      "introduces_families": [
+        "w"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l14",
+      "title": "Family: ደ",
+      "subtitle": "The 7 orders of ደ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_d1",
+        "am_g_d2",
+        "am_g_d3",
+        "am_g_d4",
+        "am_g_d5",
+        "am_g_d6",
+        "am_g_d7"
+      ],
+      "introduces_families": [
+        "d"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l15",
+      "title": "Family: የ",
+      "subtitle": "The 7 orders of የ",
+      "tier": 2,
+      "item_ids": [
+        "am_g_y1",
+        "am_g_y2",
+        "am_g_y3",
+        "am_g_y4",
+        "am_g_y5",
+        "am_g_y6",
+        "am_g_y7"
+      ],
+      "introduces_families": [
+        "y"
+      ],
+      "exercise_weights": {
+        "listen_select": 4,
+        "match_pairs": 3,
+        "trace_glyph": 2,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l16",
+      "title": "Read fidel",
+      "subtitle": "Words, script first",
+      "tier": 3,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa",
+        "am_w_kokeb",
+        "am_w_mekina",
+        "am_w_arat"
+      ],
+      "exercise_weights": {
+        "multiple_choice": 3,
+        "listen_select": 3,
+        "fill_blank": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l17",
+      "title": "Missing letters",
+      "subtitle": "Complete the word",
+      "tier": 3,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa",
+        "am_w_kokeb",
+        "am_w_mekina",
+        "am_w_arat"
+      ],
+      "exercise_weights": {
+        "fill_blank": 4,
+        "listen_select": 3
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l18",
+      "title": "Write what you hear",
+      "subtitle": "Full fidel dictation",
+      "tier": 3,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa",
+        "am_w_kokeb",
+        "am_w_mekina",
+        "am_w_arat"
+      ],
+      "exercise_weights": {
+        "listen_write": 5,
+        "fill_blank": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l19",
+      "title": "Reading sprint",
+      "subtitle": "No hints unless you tap",
+      "tier": 3,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa",
+        "am_w_kokeb",
+        "am_w_mekina",
+        "am_w_arat"
+      ],
+      "exercise_weights": {
+        "multiple_choice": 3,
+        "fill_blank": 3,
+        "listen_write": 2
+      },
+      "length": 10
+    },
+    {
+      "id": "am_l20",
+      "title": "Tier 3 checkpoint",
+      "subtitle": "Everything, fidel-first",
+      "tier": 3,
+      "item_ids": [
+        "am_w_selam",
+        "am_w_bet",
+        "am_w_weha",
+        "am_w_sem",
+        "am_w_leb",
+        "am_w_ber",
+        "am_w_dabo",
+        "am_w_enat",
+        "am_w_abat",
+        "am_w_mar",
+        "am_w_sew",
+        "am_w_dem",
+        "am_w_anbesa",
+        "am_w_kokeb",
+        "am_w_mekina",
+        "am_w_arat"
+      ],
+      "exercise_weights": {
+        "listen_write": 3,
+        "fill_blank": 3,
+        "multiple_choice": 2,
+        "listen_select": 2
+      },
+      "length": 10
+    }
+  ]
+}

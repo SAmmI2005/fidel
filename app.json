@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Fidel",
+    "slug": "fidel",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": ["assets/**/*", "content/**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourorg.fidel",
+      "infoPlist": { "UIBackgroundModes": ["audio"] }
+    },
+    "android": {
+      "package": "com.yourorg.fidel"
+    },
+    "splash": { "backgroundColor": "#211A14" }
+  }
+}

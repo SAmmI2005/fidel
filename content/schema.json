@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fidel course content",
+  "type": "object",
+  "required": ["course", "display_name", "lessons", "items", "families", "audio_strategy", "tts_locale"],
+  "properties": {
+    "course": { "enum": ["amharic", "tigrinya"] },
+    "display_name": { "type": "string" },
+    "audio_strategy": { "enum": ["tts", "recorded"] },
+    "tts_locale": { "type": ["string", "null"] },
+    "families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "forms", "romanized"],
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "forms": { "type": "array", "items": { "type": "string" }, "minItems": 7, "maxItems": 7 },
+          "romanized": { "type": "array", "items": { "type": "string" }, "minItems": 7, "maxItems": 7 }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "glyph", "transliteration", "audio_path", "english_gloss", "grammar_tag", "difficulty_tier", "family_group"],
+        "properties": {
+          "id": { "type": "string" },
+          "glyph": { "type": "string" },
+          "transliteration": { "type": "string" },
+          "audio_path": { "type": "string" },
+          "english_gloss": { "type": ["string", "null"] },
+          "grammar_tag": { "enum": ["glyph", "noun", "verb", "greeting", "phrase", "number"] },
+          "difficulty_tier": { "enum": [1, 2, 3] },
+          "family_group": { "type": ["string", "null"] },
+          "order": { "type": "integer", "minimum": 1, "maximum": 7 }
+        }
+      }
+    },
+    "lessons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "subtitle", "tier", "item_ids"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "subtitle": { "type": "string" },
+          "tier": { "enum": [1, 2, 3] },
+          "item_ids": { "type": "array", "items": { "type": "string" } },
+          "introduces_families": { "type": "array", "items": { "type": "string" } },
+          "exercise_weights": { "type": "object" },
+          "length": { "type": "integer" }
+        }
+      }
+    }
+  }
+}
