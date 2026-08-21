@@ -1,7 +1,4 @@
 node_modules/
 .expo/
-dist/
-*.log
 .env
-ios/
-android/
+eas.json
