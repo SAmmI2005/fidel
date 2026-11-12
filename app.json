@@ -8,22 +8,30 @@
             "useFrameworks": "static"
           }
         }
-      ]
+      ],
+      "expo-asset"
     ],
     "name": "Fidel",
     "slug": "fidel",
     "version": "0.1.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
-    "assetBundlePatterns": ["assets/**/*", "content/**/*"],
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "assets/**/*",
+      "content/**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yourorg.fidel",
-      "infoPlist": { "UIBackgroundModes": ["audio"] }
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "package": "com.yourorg.fidel"
     },
-    "splash": { "backgroundColor": "#211A14" }
+    "splash": {
+      "backgroundColor": "#211A14"
+    }
   }
 }

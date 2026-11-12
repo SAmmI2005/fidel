@@ -49,7 +49,17 @@ export function TierText({ item, tier, size = 'hero', onHintUsed }: Props) {
     );
   }
 
-  // tier 3: fidel-primary, transliteration is a tap-to-reveal hint
+  // tier 3 chips are answer options inside a Pressable card: a nested Pressable
+  // here would swallow the tap meant to answer, so chips show fidel only.
+  if (!hero) {
+    return (
+      <View style={styles.center}>
+        <Text style={styles.fidelChip}>{item.glyph}</Text>
+      </View>
+    );
+  }
+
+  // tier 3 hero: fidel-primary, transliteration is a tap-to-reveal hint
   return (
     <Pressable
       style={styles.center}
@@ -60,12 +70,12 @@ export function TierText({ item, tier, size = 'hero', onHintUsed }: Props) {
         }
       }}
     >
-      <Text style={hero ? type.fidelHero : styles.fidelChip}>{item.glyph}</Text>
+      <Text style={type.fidelHero}>{item.glyph}</Text>
       {revealed ? (
         <Text style={styles.latinSub}>{item.transliteration}</Text>
-      ) : hero ? (
+      ) : (
         <Text style={styles.hint}>tap for hint</Text>
-      ) : null}
+      )}
     </Pressable>
   );
 }

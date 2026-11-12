@@ -13,7 +13,7 @@ import type { RootStackParamList } from '../navigation';
 import { getCourse } from '../content/loader';
 import { generateLessonExercises, type Exercise } from '../engine/exerciseGenerator';
 import { dueItems } from '../srs/scheduler';
-import { useProgressStore } from '../state/useProgressStore';
+import { HEARTS_ENABLED, LESSON_BONUS_XP, useProgressStore } from '../state/useProgressStore';
 import { AudioButton } from '../components/AudioButton';
 import { ListenSelect } from '../exercises/ListenSelect';
 import { ListenWrite } from '../exercises/ListenWrite';
@@ -21,7 +21,7 @@ import { MatchPairs } from '../exercises/MatchPairs';
 import { TraceGlyph } from '../exercises/TraceGlyph';
 import { MultipleChoice } from '../exercises/MultipleChoice';
 import { FillBlank } from '../exercises/FillBlank';
-import type { Grade } from '../exercises/common';
+import type { ExerciseProps, Grade } from '../exercises/common';
 import { colors, radii, space, type } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Lesson'>;
@@ -50,11 +50,13 @@ export function LessonScreen({ route, navigation }: Props) {
     [lessonId]
   );
 
-  const [phase, setPhase] = useState<'intro' | 'drill' | 'done' | 'failed'>(
-    lesson.introduces_families?.length ? 'intro' : 'drill'
+  const [phase, setPhase] = useState<'intro' | 'drill' | 'done' | 'failed'>(() =>
+    // no hearts left → don't let the lesson start
+    HEARTS_ENABLED && hearts === 0 ? 'failed' : lesson.introduces_families?.length ? 'intro' : 'drill'
   );
   const [index, setIndex] = useState(0);
   const [lastGrade, setLastGrade] = useState<Grade | null>(null);
+  const [xpEarned, setXpEarned] = useState(0);
   const results = useRef<Grade[]>([]);
 
   const exercise = exercises[index];
@@ -66,7 +68,7 @@ export function LessonScreen({ route, navigation }: Props) {
     recordAnswer(exercise.target.id, grade);
     if (grade === 0) {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
-      if (loseHeart() === 0) setPhase('failed');
+      if (HEARTS_ENABLED && loseHeart() === 0) setPhase('failed');
     } else {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     }
@@ -76,6 +78,13 @@ export function LessonScreen({ route, navigation }: Props) {
     setLastGrade(null);
     if (index + 1 >= exercises.length) {
       const correct = results.current.filter((g) => g > 0).length;
+      const firstCompletion =
+        useProgressStore.getState().byCourse[course].completedLessons[lessonId] == null;
+      // mirrors recordAnswer/completeLesson: 10 per answer, 5 if hinted, bonus on first completion
+      setXpEarned(
+        results.current.reduce<number>((sum, g) => sum + (g === 2 ? 10 : g === 1 ? 5 : 0), 0) +
+          (firstCompletion ? LESSON_BONUS_XP : 0)
+      );
       completeLesson(lessonId, correct / Math.max(1, results.current.length));
       setPhase('done');
     } else {
@@ -143,7 +152,7 @@ export function LessonScreen({ route, navigation }: Props) {
     return (
       <Terminal
         title="Lesson complete"
-        body={`${correct}/${results.current.length} correct · +${correct * 10 + 20} XP`}
+        body={`${correct}/${results.current.length} correct · +${xpEarned} XP`}
         cta="Continue"
         onPress={() => navigation.goBack()}
       />
@@ -160,11 +169,18 @@ export function LessonScreen({ route, navigation }: Props) {
         <View style={styles.progressTrack}>
           <View style={[styles.progressFill, { width: `${(index / exercises.length) * 100}%` }]} />
         </View>
-        <Text style={styles.hearts}>♥ {hearts}</Text>
+        {HEARTS_ENABLED && <Text style={styles.hearts}>♥ {hearts}</Text>}
       </View>
 
       <View style={{ flex: 1 }}>
-        <ExerciseSwitch key={exercise.id} exercise={exercise} courseId={course} tier={tier} onAnswer={onAnswer} />
+        <ExerciseSwitch
+          key={exercise.id}
+          exercise={exercise}
+          courseId={course}
+          tier={tier}
+          onAnswer={onAnswer}
+          introducedFamilies={lesson.introduces_families}
+        />
       </View>
 
       {lastGrade != null && (
@@ -185,7 +201,7 @@ export function LessonScreen({ route, navigation }: Props) {
   );
 }
 
-function ExerciseSwitch(props: { exercise: Exercise; courseId: any; tier: any; onAnswer: (g: Grade) => void }) {
+function ExerciseSwitch(props: ExerciseProps<Exercise>) {
   const { exercise } = props;
   switch (exercise.type) {
     case 'listen_select':

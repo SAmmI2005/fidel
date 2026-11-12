@@ -1,4 +1,8 @@
 node_modules/
 .expo/
 .env
-eas.json
+dist/
+*.log
+ios/
+android/
+.DS_Store

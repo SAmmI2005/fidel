@@ -1,3 +1,4 @@
+import React from 'react';
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -6,11 +7,18 @@ import { getCourse } from '../content/loader';
 import { SrsCard, newCard, review } from '../srs/scheduler';
 
 const MAX_HEARTS = 5;
+/**
+ * MVP: hearts are off so testers never get locked out mid-lesson and every
+ * lesson gets played to the end. Flip to true to restore the heart economy
+ * (loss on wrong answers, lesson ends at 0, daily refill, UI counters).
+ */
+export const HEARTS_ENABLED = false;
+export const LESSON_BONUS_XP = 20;
 
 export interface CourseProgress {
-  /** lesson id -> best completion (0..1 accuracy of last full run) */
+  /** lesson id -> best accuracy (0..1) across full runs */
   completedLessons: Record<string, number>;
-  /** family key -> mastered (introduced + passed its lesson) */
+  /** family key -> mastered (introduced + its lesson passed at MASTERY_ACCURACY) */
   masteredFamilies: Record<string, boolean>;
   srs: Record<string, SrsCard>;
   xp: number;
@@ -44,8 +52,18 @@ const emptyCourse = (): CourseProgress => ({
   xp: 0,
 });
 
-const today = () => new Date().toISOString().slice(0, 10);
-const yesterday = () => new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+/** Accuracy a lesson run needs before its new families count as mastered. */
+export const MASTERY_ACCURACY = 0.8;
+
+/** Local calendar day (yyyy-mm-dd) — streaks and heart refills follow the user's clock, not UTC. */
+const localDay = (d: Date) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const today = () => localDay(new Date());
+const yesterday = () => {
+  const d = new Date();
+  d.setDate(d.getDate() - 1); // calendar arithmetic, safe across DST changes
+  return localDay(d);
+};
 
 export const useProgressStore = create<ProgressState>()(
   persist(
@@ -113,21 +131,27 @@ export const useProgressStore = create<ProgressState>()(
           const lesson = lessonById.get(lessonId);
           const p = s.byCourse[s.course];
           const mastered = { ...p.masteredFamilies };
-          for (const f of lesson?.introduces_families ?? []) mastered[f] = true;
+          // Finishing always unlocks the next lesson; mastery has to be earned.
+          // A weak run can be replayed later to master the families.
+          if (accuracy >= MASTERY_ACCURACY) {
+            for (const f of lesson?.introduces_families ?? []) mastered[f] = true;
+          }
+          const previousBest = p.completedLessons[lessonId];
           return {
             byCourse: {
               ...s.byCourse,
               [s.course]: {
                 ...p,
-                completedLessons: { ...p.completedLessons, [lessonId]: accuracy },
+                completedLessons: { ...p.completedLessons, [lessonId]: Math.max(accuracy, previousBest ?? 0) },
                 masteredFamilies: mastered,
-                xp: p.xp + 20, // lesson-completion bonus
+                xp: p.xp + (previousBest == null ? LESSON_BONUS_XP : 0), // bonus on first completion only
               },
             },
           };
         }),
 
       loseHeart: () => {
+        if (!HEARTS_ENABLED) return MAX_HEARTS;
         const next = Math.max(0, get().hearts - 1);
         set({ hearts: next });
         return next;
@@ -153,3 +177,18 @@ export const useProgressStore = create<ProgressState>()(
 );
 
 export { MAX_HEARTS };
+
+/**
+ * Progress loads from AsyncStorage asynchronously. Anything that decides
+ * based on saved state at startup (e.g. the first screen) must wait for this,
+ * or returning users look like new ones for the first render.
+ */
+export function useHasHydrated(): boolean {
+  const [hydrated, setHydrated] = React.useState(() => useProgressStore.persist.hasHydrated());
+  React.useEffect(() => {
+    const unsub = useProgressStore.persist.onFinishHydration(() => setHydrated(true));
+    if (useProgressStore.persist.hasHydrated()) setHydrated(true);
+    return unsub;
+  }, []);
+  return hydrated;
+}

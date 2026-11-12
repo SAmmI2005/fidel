@@ -28,6 +28,9 @@ export function review(card: SrsCard, grade: 0 | 1 | 2, now = Date.now()): SrsCa
     c.dueAt = now + 10 * 60 * 1000; // resurface within the session / 10 min
     return c;
   }
+  // A correct answer before the card is due (e.g. the same item appearing twice
+  // in one lesson) proves nothing about long-term recall: don't grow the interval.
+  if (card.dueAt > now) return c;
   c.ease = Math.min(2.8, c.ease + (grade === 2 ? 0.05 : -0.05));
   c.intervalDays = c.intervalDays === 0 ? (grade === 2 ? 1 : 0.5) : c.intervalDays * c.ease;
   c.dueAt = now + c.intervalDays * DAY;

@@ -2,7 +2,7 @@
 
 A Duolingo-style MVP for heritage speakers of **Amharic** and **Tigrinya** who understand the spoken language but can't read or write Ge'ez script (fidel). One skill-tree branch, 20 lessons per course, built to validate the core loop with real users.
 
-React Native + Expo (SDK 51), TypeScript strict, iOS-first via EAS Build.
+React Native + Expo (SDK 54), TypeScript strict, iOS-first via EAS Build.
 
 ## Run it
 

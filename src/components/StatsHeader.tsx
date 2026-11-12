@@ -2,7 +2,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors, space } from '../theme';
-import { useProgressStore, MAX_HEARTS } from '../state/useProgressStore';
+import { useProgressStore, MAX_HEARTS, HEARTS_ENABLED } from '../state/useProgressStore';
 
 export function StatsHeader() {
   const streak = useProgressStore((s) => s.streak);
@@ -15,7 +15,7 @@ export function StatsHeader() {
     <View style={styles.row}>
       <Stat label="streak" value={`🔥 ${streak}`} />
       <Stat label="xp" value={`✦ ${xp}`} color={colors.brass} />
-      <Stat label="hearts" value={`♥ ${hearts}/${MAX_HEARTS}`} color={colors.rubric} />
+      {HEARTS_ENABLED && <Stat label="hearts" value={`♥ ${hearts}/${MAX_HEARTS}`} color={colors.rubric} />}
     </View>
   );
 }

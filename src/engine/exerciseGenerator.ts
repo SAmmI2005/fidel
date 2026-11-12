@@ -77,15 +77,19 @@ function eligibleTypes(item: ContentItem, tier: DifficultyTier): ExerciseType[] 
   return types;
 }
 
+/** Weighted pick. A weight of 0 disables a type; if every option is 0, pick uniformly. */
 function pickWeighted<T extends string>(options: T[], weights: Partial<Record<T, number>>, rng: () => number): T {
   const w = options.map((o) => Math.max(0, weights[o] ?? 0));
-  const total = w.reduce((a, b) => a + b, 0) || options.length;
+  const total = w.reduce((a, b) => a + b, 0);
+  if (total <= 0) return options[Math.floor(rng() * options.length)];
   let roll = rng() * total;
   for (let i = 0; i < options.length; i++) {
-    roll -= w[i] || total / options.length;
+    if (w[i] <= 0) continue;
+    roll -= w[i];
     if (roll <= 0) return options[i];
   }
-  return options[options.length - 1];
+  for (let i = options.length - 1; i >= 0; i--) if (w[i] > 0) return options[i]; // float rounding
+  return options[0];
 }
 
 function shuffle<T>(arr: T[], rng: () => number): T[] {
@@ -97,13 +101,34 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
   return a;
 }
 
-/** Distractors: same family first (the genuinely confusable ones), then same tag. */
+/**
+ * Distractors: same family first (the genuinely confusable ones), then same tag,
+ * then any item of the same kind (glyph vs word). The last tier matters for
+ * one-of-a-kind tags (e.g. the only 'greeting'), which otherwise got zero
+ * distractors and produced single-option questions.
+ */
 function distractorsFor(courseId: CourseId, target: ContentItem, n: number, rng: () => number): ContentItem[] {
   const { content } = getCourse(courseId);
-  const pool = content.items.filter((i) => i.id !== target.id && i.grammar_tag === target.grammar_tag);
-  const sameFamily = pool.filter((i) => target.family_group && i.family_group === target.family_group);
-  const rest = shuffle(pool.filter((i) => !sameFamily.includes(i)), rng);
-  return [...shuffle(sameFamily, rng), ...rest].slice(0, n);
+  const isGlyph = (i: ContentItem) => i.grammar_tag === 'glyph';
+  const others = content.items.filter((i) => i.id !== target.id && isGlyph(i) === isGlyph(target));
+  const sameTag = others.filter((i) => i.grammar_tag === target.grammar_tag);
+  const sameFamily = sameTag.filter((i) => target.family_group && i.family_group === target.family_group);
+  const restOfTag = sameTag.filter((i) => !sameFamily.includes(i));
+  const restOfKind = others.filter((i) => !sameTag.includes(i));
+  const ordered = [...shuffle(sameFamily, rng), ...shuffle(restOfTag, rng), ...shuffle(restOfKind, rng)];
+
+  // Never offer two options that read or sound the same (e.g. ሀ and ሐ are both
+  // "hä" in Amharic) — the question would have two right answers.
+  const seen = new Set([target.transliteration, target.glyph]);
+  const picked: ContentItem[] = [];
+  for (const item of ordered) {
+    if (picked.length >= n) break;
+    if (seen.has(item.transliteration) || seen.has(item.glyph)) continue;
+    seen.add(item.transliteration);
+    seen.add(item.glyph);
+    picked.push(item);
+  }
+  return picked;
 }
 
 let counter = 0;
@@ -187,21 +212,23 @@ export function generateLessonExercises(opts: GenerateOptions): Exercise[] {
 
   const reviewCount = Math.min(reviewItems.length, Math.round(length * 0.2));
   const picked: ContentItem[] = [];
-  for (let i = 0; i < length - reviewCount; i++) picked.push(lessonItems[i % lessonItems.length]);
+  // Shuffle before cycling: lessons can hold more items than exercises, and
+  // without this the items past the first `length` would never appear.
+  const pool = shuffle(lessonItems, rng);
+  for (let i = 0; i < length - reviewCount && pool.length; i++) picked.push(pool[i % pool.length]);
   picked.push(...shuffle(reviewItems, rng).slice(0, reviewCount));
 
   const exercises: Exercise[] = [];
   for (const item of shuffle(picked, rng)) {
     const types = eligibleTypes(item, tier);
     // a few attempts in case the chosen type can't be built for this item
-    for (let attempt = 0; attempt < 4; attempt++) {
-      const type = pickWeighted(types, weights, rng);
-      const ex = buildExercise(courseId, item, type, rng);
-      if (ex) {
-        exercises.push(ex);
-        break;
-      }
+    let built: Exercise | null = null;
+    for (let attempt = 0; attempt < 4 && !built; attempt++) {
+      built = buildExercise(courseId, item, pickWeighted(types, weights, rng), rng);
     }
+    // listen_select can always be built — never silently drop an item
+    built ??= buildExercise(courseId, item, 'listen_select', rng);
+    if (built) exercises.push(built);
   }
   return exercises;
 }

@@ -3,7 +3,7 @@
  * A review node appears whenever the SRS queue has due items.
  */
 import React, { useEffect } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { AppState, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation';
@@ -30,8 +30,17 @@ export function SkillTreeScreen({ navigation }: Props) {
   const resetHearts = useProgressStore((s) => s.resetHeartsIfNewDay);
 
   useEffect(() => {
-    touchDay();
-    resetHearts();
+    const refresh = () => {
+      touchDay();
+      resetHearts();
+    };
+    refresh();
+    // The tree stays mounted under lessons, so also refresh when the app
+    // returns to the foreground (e.g. opened again the next morning).
+    const sub = AppState.addEventListener('change', (state) => {
+      if (state === 'active') refresh();
+    });
+    return () => sub.remove();
   }, []);
 
   if (!course) return null;
@@ -43,7 +52,21 @@ export function SkillTreeScreen({ navigation }: Props) {
     <SafeAreaView style={styles.screen}>
       <StatsHeader />
       <ScrollView contentContainerStyle={styles.scroll}>
-        <Text style={styles.courseName}>{content.display_name}</Text>
+        <View style={styles.courseRow}>
+          <Text style={styles.courseName}>{content.display_name}</Text>
+          <Pressable onPress={() => navigation.navigate('Onboarding')} hitSlop={12}>
+            <Text style={styles.changeCourse}>Change</Text>
+          </Pressable>
+        </View>
+
+        <Pressable style={styles.chart} onPress={() => navigation.navigate('FidelChart')}>
+          <Text style={styles.chartGlyph}>ሀ ሁ ሂ</Text>
+          <View style={{ flex: 1 }}>
+            <Text style={type.body}>Fidel chart</Text>
+            <Text style={type.caption}>Practice every letter</Text>
+          </View>
+          <Text style={styles.chartArrow}>›</Text>
+        </Pressable>
 
         {due.length > 0 && (
           <Pressable style={styles.review} onPress={() => navigation.navigate('Review')}>
@@ -88,7 +111,15 @@ export function SkillTreeScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.ground },
   scroll: { padding: space(4), gap: space(3), paddingBottom: space(12) },
-  courseName: { ...type.title, textAlign: 'center', marginBottom: space(2) },
+  courseRow: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'center',
+    gap: space(3),
+    marginBottom: space(2),
+  },
+  courseName: { ...type.title, textAlign: 'center' },
+  changeCourse: { ...type.caption, color: colors.rubric, textTransform: 'none' },
   tierHeader: { ...type.caption, color: colors.brass, marginTop: space(4), marginBottom: space(2) },
   node: {
     flexDirection: 'row',
@@ -124,4 +155,16 @@ const styles = StyleSheet.create({
     padding: space(4),
   },
   reviewGlyph: { fontSize: 24, color: colors.brass },
+  chart: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space(3),
+    backgroundColor: colors.groundSunken,
+    borderRadius: radii.card,
+    borderWidth: 1.5,
+    borderColor: colors.rubric,
+    padding: space(4),
+  },
+  chartGlyph: { fontSize: 20, color: colors.rubric },
+  chartArrow: { fontSize: 24, color: colors.boneDim },
 });

@@ -13,6 +13,7 @@ import { colors, radii, space, type } from '../theme';
 import type { ExerciseProps } from './common';
 
 const SIZE = 280;
+const MIN_INK = SIZE * 1.2;
 
 export function TraceGlyph({ exercise, onAnswer }: ExerciseProps<TraceGlyphExercise>) {
   const [paths, setPaths] = useState<string[]>([]);
@@ -33,24 +34,34 @@ export function TraceGlyph({ exercise, onAnswer }: ExerciseProps<TraceGlyphExerc
       onPanResponderMove: (e) => {
         const { locationX: x, locationY: y } = e.nativeEvent;
         current.current += ` L${x.toFixed(1)},${y.toFixed(1)}`;
-        if (last.current) {
-          setInkLen((l) => l + Math.hypot(x - last.current!.x, y - last.current!.y));
+        // Compute the distance now: the state updater can run later, after
+        // last.current has moved on or been cleared on release (→ crash).
+        const prev = last.current;
+        if (prev) {
+          const step = Math.hypot(x - prev.x, y - prev.y);
+          setInkLen((l) => l + step);
         }
         last.current = { x, y };
         force((n) => n + 1);
       },
       onPanResponderRelease: () => {
-        if (current.current) setPaths((p) => [...p, current.current]);
+        // capture now: the updater may run after current.current is reset below
+        const stroke = current.current;
+        if (stroke) setPaths((p) => [...p, stroke]);
         current.current = '';
         last.current = null;
       },
     })
   ).current;
 
+  // The check is only an ink-length heuristic, so it never fails anyone (no
+  // lost hearts for a small, careful trace): Done unlocks once there's enough
+  // ink, and the grade is capped at hint-level to keep the SRS honest.
+  const enoughInk = inkLen > MIN_INK;
   const check = () => {
-    if (done) return;
+    if (done || !enoughInk) return;
     setDone(true);
-    onAnswer(inkLen > SIZE * 1.2 ? 1 : 0); // enough deliberate ink → pass (hint-grade)
+    onAnswer(1);
   };
 
   return (
@@ -75,10 +86,17 @@ export function TraceGlyph({ exercise, onAnswer }: ExerciseProps<TraceGlyphExerc
         </Svg>
       </View>
       <View style={styles.actions}>
-        <Pressable style={styles.quiet} onPress={() => { setPaths([]); setInkLen(0); }}>
+        <Pressable
+          style={styles.quiet}
+          disabled={done}
+          onPress={() => {
+            setPaths([]);
+            setInkLen(0);
+          }}
+        >
           <Text style={styles.quietText}>Clear</Text>
         </Pressable>
-        <Pressable style={styles.primary} onPress={check}>
+        <Pressable style={[styles.primary, !enoughInk && { opacity: 0.4 }]} disabled={!enoughInk || done} onPress={check}>
           <Text style={styles.primaryText}>Done</Text>
         </Pressable>
       </View>

@@ -9,4 +9,6 @@ export interface ExerciseProps<E> {
   tier: DifficultyTier;
   /** Fired exactly once, when the learner locks in an answer. */
   onAnswer: (grade: Grade) => void;
+  /** Families the current lesson teaches — usable on the keyboard before they're mastered. */
+  introducedFamilies?: string[];
 }
