@@ -2,10 +2,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { colors, space } from '../theme';
-import { useProgressStore, MAX_HEARTS, HEARTS_ENABLED } from '../state/useProgressStore';
+import { useProgressStore, MAX_HEARTS, HEARTS_ENABLED, selectDisplayStreak } from '../state/useProgressStore';
 
 export function StatsHeader() {
-  const streak = useProgressStore((s) => s.streak);
+  const streak = useProgressStore(selectDisplayStreak);
   const hearts = useProgressStore((s) => s.hearts);
   const course = useProgressStore((s) => s.course);
   const xp = useProgressStore((s) => (s.course ? s.byCourse[s.course].xp : 0));

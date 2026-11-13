@@ -4,6 +4,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation';
+import { useConfirmLeave } from '../navigation/useConfirmLeave';
 import { generateReviewExercises, type Exercise } from '../engine/exerciseGenerator';
 import { dueItems } from '../srs/scheduler';
 import { useProgressStore } from '../state/useProgressStore';
@@ -32,6 +33,12 @@ export function ReviewScreen({ navigation }: Props) {
   const [graded, setGraded] = useState<Grade | null>(null);
   const done = useRef(0);
 
+  const inProgress = exercises.length > 0 && index < exercises.length;
+  const leaveDialog = useConfirmLeave(navigation, inProgress, {
+    title: 'Leave this review?',
+    message: 'Items you already answered are saved.',
+  });
+
   if (!exercises.length || index >= exercises.length) {
     return (
       <SafeAreaView style={[styles.screen, styles.center]}>
@@ -58,9 +65,15 @@ export function ReviewScreen({ navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.screen}>
-      <Text style={[type.caption, { textAlign: 'center', paddingTop: space(2) }]}>
-        review · {index + 1}/{exercises.length}
-      </Text>
+      <View style={styles.topBar}>
+        <Pressable onPress={() => navigation.goBack()} hitSlop={12}>
+          <Text style={styles.close}>✕</Text>
+        </Pressable>
+        <Text style={type.caption}>
+          review · {index + 1}/{exercises.length}
+        </Text>
+        <View style={{ width: 20 }} />
+      </View>
       <View style={{ flex: 1 }} key={exercise.id}>
         {exercise.type === 'listen_select' && <ListenSelect {...common} exercise={exercise} />}
         {exercise.type === 'listen_write' && <ListenWrite {...common} exercise={exercise} />}
@@ -80,12 +93,21 @@ export function ReviewScreen({ navigation }: Props) {
           <Text style={styles.primaryText}>Continue</Text>
         </Pressable>
       )}
+      {leaveDialog}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.ground },
+  topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: space(4),
+    paddingVertical: space(2),
+  },
+  close: { color: colors.boneDim, fontSize: 20 },
   center: { justifyContent: 'center', alignItems: 'center', gap: space(4) },
   primary: {
     backgroundColor: colors.rubric,

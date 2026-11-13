@@ -19,6 +19,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation';
+import { useConfirmLeave } from '../navigation/useConfirmLeave';
 import { useProgressStore } from '../state/useProgressStore';
 import { chartFor, type ChartCell } from '../content/fidelChart';
 import { buildQuiz, isTypedAnswerCorrect, type QuizQuestion } from '../engine/chartQuiz';
@@ -51,6 +52,12 @@ export function FidelQuizScreen({ route, navigation }: Props) {
   const question: QuizQuestion | undefined = questions[index];
   const answered = results.length > index;
   const finished = index >= questions.length;
+
+  // Nothing to lose before the first answer, so only ask once the round has started.
+  const leaveDialog = useConfirmLeave(navigation, !finished && results.length > 0, {
+    title: 'Leave this quiz?',
+    message: 'Your score for this round will be lost.',
+  });
 
   const record = (correct: boolean, given: string) => {
     if (answered || !question) return;
@@ -223,6 +230,7 @@ export function FidelQuizScreen({ route, navigation }: Props) {
           ) : null}
         </ScrollView>
       </KeyboardAvoidingView>
+      {leaveDialog}
     </SafeAreaView>
   );
 }

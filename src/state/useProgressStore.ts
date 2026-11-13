@@ -179,6 +179,14 @@ export const useProgressStore = create<ProgressState>()(
 export { MAX_HEARTS };
 
 /**
+ * Streak as the user should see it. The stored `streak` only changes when they
+ * practice, so after missed days it would still show the old number until the
+ * next lesson. A streak is alive only if they practiced today or yesterday.
+ */
+export const selectDisplayStreak = (s: Pick<ProgressState, 'streak' | 'lastActiveDay'>) =>
+  s.lastActiveDay === today() || s.lastActiveDay === yesterday() ? s.streak : 0;
+
+/**
  * Progress loads from AsyncStorage asynchronously. Anything that decides
  * based on saved state at startup (e.g. the first screen) must wait for this,
  * or returning users look like new ones for the first render.

@@ -42,7 +42,8 @@ export function RootNavigator() {
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
         <Stack.Screen name="SkillTree" component={SkillTreeScreen} />
         <Stack.Screen name="Lesson" component={LessonScreen} options={{ gestureEnabled: false }} />
-        <Stack.Screen name="Review" component={ReviewScreen} />
+        {/* swipe-back can't be intercepted for the "are you sure?" prompt, so these use ✕ */}
+        <Stack.Screen name="Review" component={ReviewScreen} options={{ gestureEnabled: false }} />
         <Stack.Screen name="FidelChart" component={FidelChartScreen} />
         <Stack.Screen name="FidelQuiz" component={FidelQuizScreen} options={{ gestureEnabled: false }} />
       </Stack.Navigator>

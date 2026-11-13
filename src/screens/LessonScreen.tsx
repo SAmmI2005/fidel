@@ -10,6 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation';
+import { useConfirmLeave } from '../navigation/useConfirmLeave';
 import { getCourse } from '../content/loader';
 import { generateLessonExercises, type Exercise } from '../engine/exerciseGenerator';
 import { dueItems } from '../srs/scheduler';
@@ -61,6 +62,12 @@ export function LessonScreen({ route, navigation }: Props) {
 
   const exercise = exercises[index];
 
+  // Ask before abandoning a lesson in progress (✕, Android back, etc.).
+  const leaveDialog = useConfirmLeave(navigation, phase === 'drill', {
+    title: 'Leave this lesson?',
+    message: "Answers so far are saved, but the lesson won't count as finished.",
+  });
+
   const onAnswer = (grade: Grade) => {
     if (lastGrade != null) return;
     results.current.push(grade);
@@ -96,6 +103,12 @@ export function LessonScreen({ route, navigation }: Props) {
   if (phase === 'intro') {
     return (
       <SafeAreaView style={styles.screen}>
+        {/* nothing answered yet, so leaving here needs no confirmation */}
+        <View style={styles.topBar}>
+          <Pressable onPress={() => navigation.goBack()} hitSlop={12}>
+            <Text style={styles.close}>✕</Text>
+          </Pressable>
+        </View>
         <ScrollView contentContainerStyle={styles.introScroll}>
           <Text style={type.caption}>New letter families</Text>
           {lesson.introduces_families!.map((key) => {
@@ -197,6 +210,7 @@ export function LessonScreen({ route, navigation }: Props) {
           </Pressable>
         </View>
       )}
+      {leaveDialog}
     </SafeAreaView>
   );
 }
