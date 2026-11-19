@@ -3,7 +3,7 @@
  * limited voices). Same contract as Azure. Like Azure, it has no Tigrinya
  * voice; supports() must stay honest about that.
  */
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import type { TTSProvider } from '../AudioService';
 
 const GOOGLE_KEY = process.env.EXPO_PUBLIC_GOOGLE_TTS_KEY ?? '';

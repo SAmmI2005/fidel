@@ -6,3 +6,6 @@ dist/
 ios/
 android/
 .DS_Store
+
+# raw recording sessions (large); processed clips live in assets/audio/
+recordings/*/raw/

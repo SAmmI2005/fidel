@@ -6,7 +6,7 @@
  *
  * Configure via app config / env; never commit keys.
  */
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import type { TTSProvider } from '../AudioService';
 
 const AZURE_KEY = process.env.EXPO_PUBLIC_AZURE_TTS_KEY ?? '';

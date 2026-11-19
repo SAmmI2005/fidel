@@ -5,6 +5,7 @@ import type { ListenWriteExercise } from '../engine/exerciseGenerator';
 import { AudioButton } from '../components/AudioButton';
 import { FidelKeyboard } from '../components/FidelKeyboard';
 import { useProgressStore } from '../state/useProgressStore';
+import { getCourse, soundKey } from '../content/loader';
 import { colors, space, type } from '../theme';
 import type { ExerciseProps } from './common';
 
@@ -32,7 +33,14 @@ export function ListenWrite({
 
   const check = () => {
     if (result != null || typed.length === 0) return; // an empty submit shouldn't cost a heart
-    const ok = typed.join('') === answer;
+    // A single letter heard on its own can be spelled any way that sounds the
+    // same (Amharic መ/ማ, ሀ/ሃ/ሐ/ኀ). Words keep their one correct spelling.
+    const { glyphItemByChar } = getCourse(courseId);
+    const target = exercise.target;
+    const typedItem = typed.length === 1 ? glyphItemByChar.get(typed[0]) : undefined;
+    const ok =
+      typed.join('') === answer ||
+      (target.grammar_tag === 'glyph' && !!typedItem && soundKey(courseId, typedItem) === soundKey(courseId, target));
     setResult(ok);
     onAnswer(ok ? 2 : 0);
   };

@@ -9,7 +9,7 @@
  * the highest default weights.
  */
 import type { ContentItem, CourseId, DifficultyTier, ExerciseType, Lesson } from '../types/content';
-import { getCourse, decompose } from '../content/loader';
+import { getCourse, decompose, soundKey } from '../content/loader';
 
 export interface BaseExercise {
   id: string;
@@ -118,14 +118,16 @@ function distractorsFor(courseId: CourseId, target: ContentItem, n: number, rng:
   const ordered = [...shuffle(sameFamily, rng), ...shuffle(restOfTag, rng), ...shuffle(restOfKind, rng)];
 
   // Never offer two options that read or sound the same (e.g. ሀ and ሐ are both
-  // "hä" in Amharic) — the question would have two right answers.
-  const seen = new Set([target.transliteration, target.glyph]);
+  // "hä" in Amharic, and መ sounds like ማ) — the question would have two right answers.
+  const seen = new Set([target.transliteration, target.glyph, soundKey(courseId, target)]);
   const picked: ContentItem[] = [];
   for (const item of ordered) {
     if (picked.length >= n) break;
-    if (seen.has(item.transliteration) || seen.has(item.glyph)) continue;
+    const sound = soundKey(courseId, item);
+    if (seen.has(item.transliteration) || seen.has(item.glyph) || seen.has(sound)) continue;
     seen.add(item.transliteration);
     seen.add(item.glyph);
+    seen.add(sound);
     picked.push(item);
   }
   return picked;

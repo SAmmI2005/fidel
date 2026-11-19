@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tigrinya recording script</title>
+<style>
+  :root { --ink:#1d1b18; --muted:#6b655c; --line:#e3ddd2; --bg:#fbf8f2; --card:#fff; --accent:#b4532a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px 16px 64px; background: var(--bg); color: var(--ink);
+         font: 16px/1.5 -apple-system, "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .howto { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin-bottom: 28px; }
+  .howto h2 { font-size: 17px; margin: 0 0 8px; }
+  .howto ol { margin: 0; padding-left: 20px; }
+  .howto li { margin: 4px 0; }
+  .take { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px 18px;
+          margin-bottom: 16px; break-inside: avoid; }
+  .take header { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+  .num { font-weight: 700; color: var(--accent); }
+  .title { font-weight: 600; }
+  .save { margin-left: auto; color: var(--muted); font-size: 14px; }
+  .take ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .letters ol { grid-template-columns: repeat(7, 1fr); }
+  .words ol { grid-template-columns: repeat(4, 1fr); }
+  .take li { display: flex; flex-direction: column; align-items: center; text-align: center;
+             padding: 8px 4px; border-radius: 8px; background: var(--bg); }
+  .g { font-size: 40px; line-height: 1.2; font-family: "Noto Sans Ethiopic", "Kefa", "Abyssinica SIL", serif; }
+  .words .g { font-size: 30px; }
+  .t { color: var(--muted); font-size: 14px; }
+  .e { color: var(--muted); font-size: 12px; font-style: italic; }
+  @media (max-width: 600px) {
+    .letters ol { grid-template-columns: repeat(4, 1fr); }
+    .words ol { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .take, .howto { border-color: #bbb; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tigrinya recording script</h1>
+  <p class="sub">46 takes · 327 sounds and words · about 30–45 minutes</p>
+
+  <div class="howto">
+    <h2>How to record</h2>
+    <ol>
+      <li>Quiet room with soft things around (a closet full of clothes is great). Fans and AC off, phone in airplane mode.</li>
+      <li>Use <b>Voice Memos</b>. Hold the phone 15–20 cm from your mouth and keep that distance the whole time.</li>
+      <li>One recording per take. Read left to right, each sound <b>once</b>, then pause about <b>2 seconds</b> before the next.</li>
+      <li>Say each sound clearly, the way you'd teach it, not stretched out. For letters, say just the sound (ለ = “lä”), not the letter's name.</li>
+      <li>Made a mistake? Stop, delete that recording and redo the whole take. They're short.</li>
+      <li>Rename each recording to its take number (<b>1</b>, <b>2</b>, … 46). Order doesn't matter, just the number.</li>
+      <li>Send all the recordings to the Mac (AirDrop, or Share → Save to Files) and put them in <code>recordings/ti/raw/</code>.</li>
+    </ol>
+  </div>
+
+  
+  <section class="take letters">
+    <header>
+      <span class="num">Take 1</span>
+      <span class="title">ሀ family</span>
+      <span class="save">save as <b>1</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሀ</span><span class="t">hä</span></li>
+      <li><span class="g">ሁ</span><span class="t">hu</span></li>
+      <li><span class="g">ሂ</span><span class="t">hi</span></li>
+      <li><span class="g">ሃ</span><span class="t">ha</span></li>
+      <li><span class="g">ሄ</span><span class="t">he</span></li>
+      <li><span class="g">ህ</span><span class="t">hə</span></li>
+      <li><span class="g">ሆ</span><span class="t">ho</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 2</span>
+      <span class="title">ለ family</span>
+      <span class="save">save as <b>2</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ለ</span><span class="t">lä</span></li>
+      <li><span class="g">ሉ</span><span class="t">lu</span></li>
+      <li><span class="g">ሊ</span><span class="t">li</span></li>
+      <li><span class="g">ላ</span><span class="t">la</span></li>
+      <li><span class="g">ሌ</span><span class="t">le</span></li>
+      <li><span class="g">ል</span><span class="t">lə</span></li>
+      <li><span class="g">ሎ</span><span class="t">lo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 3</span>
+      <span class="title">ሐ family</span>
+      <span class="save">save as <b>3</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሐ</span><span class="t">ḥä</span></li>
+      <li><span class="g">ሑ</span><span class="t">ḥu</span></li>
+      <li><span class="g">ሒ</span><span class="t">ḥi</span></li>
+      <li><span class="g">ሓ</span><span class="t">ḥa</span></li>
+      <li><span class="g">ሔ</span><span class="t">ḥe</span></li>
+      <li><span class="g">ሕ</span><span class="t">ḥə</span></li>
+      <li><span class="g">ሖ</span><span class="t">ḥo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 4</span>
+      <span class="title">መ family</span>
+      <span class="save">save as <b>4</b></span>
+    </header>
+    <ol>
+      <li><span class="g">መ</span><span class="t">mä</span></li>
+      <li><span class="g">ሙ</span><span class="t">mu</span></li>
+      <li><span class="g">ሚ</span><span class="t">mi</span></li>
+      <li><span class="g">ማ</span><span class="t">ma</span></li>
+      <li><span class="g">ሜ</span><span class="t">me</span></li>
+      <li><span class="g">ም</span><span class="t">mə</span></li>
+      <li><span class="g">ሞ</span><span class="t">mo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 5</span>
+      <span class="title">ረ family</span>
+      <span class="save">save as <b>5</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ረ</span><span class="t">rä</span></li>
+      <li><span class="g">ሩ</span><span class="t">ru</span></li>
+      <li><span class="g">ሪ</span><span class="t">ri</span></li>
+      <li><span class="g">ራ</span><span class="t">ra</span></li>
+      <li><span class="g">ሬ</span><span class="t">re</span></li>
+      <li><span class="g">ር</span><span class="t">rə</span></li>
+      <li><span class="g">ሮ</span><span class="t">ro</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 6</span>
+      <span class="title">ሰ family</span>
+      <span class="save">save as <b>6</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሰ</span><span class="t">sä</span></li>
+      <li><span class="g">ሱ</span><span class="t">su</span></li>
+      <li><span class="g">ሲ</span><span class="t">si</span></li>
+      <li><span class="g">ሳ</span><span class="t">sa</span></li>
+      <li><span class="g">ሴ</span><span class="t">se</span></li>
+      <li><span class="g">ስ</span><span class="t">sə</span></li>
+      <li><span class="g">ሶ</span><span class="t">so</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 7</span>
+      <span class="title">ሸ family</span>
+      <span class="save">save as <b>7</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሸ</span><span class="t">shä</span></li>
+      <li><span class="g">ሹ</span><span class="t">shu</span></li>
+      <li><span class="g">ሺ</span><span class="t">shi</span></li>
+      <li><span class="g">ሻ</span><span class="t">sha</span></li>
+      <li><span class="g">ሼ</span><span class="t">she</span></li>
+      <li><span class="g">ሽ</span><span class="t">shə</span></li>
+      <li><span class="g">ሾ</span><span class="t">sho</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 8</span>
+      <span class="title">ቀ family</span>
+      <span class="save">save as <b>8</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቀ</span><span class="t">qä</span></li>
+      <li><span class="g">ቁ</span><span class="t">qu</span></li>
+      <li><span class="g">ቂ</span><span class="t">qi</span></li>
+      <li><span class="g">ቃ</span><span class="t">qa</span></li>
+      <li><span class="g">ቄ</span><span class="t">qe</span></li>
+      <li><span class="g">ቅ</span><span class="t">qə</span></li>
+      <li><span class="g">ቆ</span><span class="t">qo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 9</span>
+      <span class="title">ቐ family</span>
+      <span class="save">save as <b>9</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቐ</span><span class="t">qhä</span></li>
+      <li><span class="g">ቑ</span><span class="t">qhu</span></li>
+      <li><span class="g">ቒ</span><span class="t">qhi</span></li>
+      <li><span class="g">ቓ</span><span class="t">qha</span></li>
+      <li><span class="g">ቔ</span><span class="t">qhe</span></li>
+      <li><span class="g">ቕ</span><span class="t">qhə</span></li>
+      <li><span class="g">ቖ</span><span class="t">qho</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 10</span>
+      <span class="title">በ family</span>
+      <span class="save">save as <b>10</b></span>
+    </header>
+    <ol>
+      <li><span class="g">በ</span><span class="t">bä</span></li>
+      <li><span class="g">ቡ</span><span class="t">bu</span></li>
+      <li><span class="g">ቢ</span><span class="t">bi</span></li>
+      <li><span class="g">ባ</span><span class="t">ba</span></li>
+      <li><span class="g">ቤ</span><span class="t">be</span></li>
+      <li><span class="g">ብ</span><span class="t">bə</span></li>
+      <li><span class="g">ቦ</span><span class="t">bo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 11</span>
+      <span class="title">ቨ family</span>
+      <span class="save">save as <b>11</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቨ</span><span class="t">vä</span></li>
+      <li><span class="g">ቩ</span><span class="t">vu</span></li>
+      <li><span class="g">ቪ</span><span class="t">vi</span></li>
+      <li><span class="g">ቫ</span><span class="t">va</span></li>
+      <li><span class="g">ቬ</span><span class="t">ve</span></li>
+      <li><span class="g">ቭ</span><span class="t">və</span></li>
+      <li><span class="g">ቮ</span><span class="t">vo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 12</span>
+      <span class="title">ተ family</span>
+      <span class="save">save as <b>12</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ተ</span><span class="t">tä</span></li>
+      <li><span class="g">ቱ</span><span class="t">tu</span></li>
+      <li><span class="g">ቲ</span><span class="t">ti</span></li>
+      <li><span class="g">ታ</span><span class="t">ta</span></li>
+      <li><span class="g">ቴ</span><span class="t">te</span></li>
+      <li><span class="g">ት</span><span class="t">tə</span></li>
+      <li><span class="g">ቶ</span><span class="t">to</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 13</span>
+      <span class="title">ቸ family</span>
+      <span class="save">save as <b>13</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቸ</span><span class="t">chä</span></li>
+      <li><span class="g">ቹ</span><span class="t">chu</span></li>
+      <li><span class="g">ቺ</span><span class="t">chi</span></li>
+      <li><span class="g">ቻ</span><span class="t">cha</span></li>
+      <li><span class="g">ቼ</span><span class="t">che</span></li>
+      <li><span class="g">ች</span><span class="t">chə</span></li>
+      <li><span class="g">ቾ</span><span class="t">cho</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 14</span>
+      <span class="title">ነ family</span>
+      <span class="save">save as <b>14</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ነ</span><span class="t">nä</span></li>
+      <li><span class="g">ኑ</span><span class="t">nu</span></li>
+      <li><span class="g">ኒ</span><span class="t">ni</span></li>
+      <li><span class="g">ና</span><span class="t">na</span></li>
+      <li><span class="g">ኔ</span><span class="t">ne</span></li>
+      <li><span class="g">ን</span><span class="t">nə</span></li>
+      <li><span class="g">ኖ</span><span class="t">no</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 15</span>
+      <span class="title">ኘ family</span>
+      <span class="save">save as <b>15</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኘ</span><span class="t">ñä</span></li>
+      <li><span class="g">ኙ</span><span class="t">ñu</span></li>
+      <li><span class="g">ኚ</span><span class="t">ñi</span></li>
+      <li><span class="g">ኛ</span><span class="t">ña</span></li>
+      <li><span class="g">ኜ</span><span class="t">ñe</span></li>
+      <li><span class="g">ኝ</span><span class="t">ñə</span></li>
+      <li><span class="g">ኞ</span><span class="t">ño</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 16</span>
+      <span class="title">አ family</span>
+      <span class="save">save as <b>16</b></span>
+    </header>
+    <ol>
+      <li><span class="g">አ</span><span class="t">ä</span></li>
+      <li><span class="g">ኡ</span><span class="t">u</span></li>
+      <li><span class="g">ኢ</span><span class="t">i</span></li>
+      <li><span class="g">ኣ</span><span class="t">a</span></li>
+      <li><span class="g">ኤ</span><span class="t">e</span></li>
+      <li><span class="g">እ</span><span class="t">ə</span></li>
+      <li><span class="g">ኦ</span><span class="t">o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 17</span>
+      <span class="title">ከ family</span>
+      <span class="save">save as <b>17</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ከ</span><span class="t">kä</span></li>
+      <li><span class="g">ኩ</span><span class="t">ku</span></li>
+      <li><span class="g">ኪ</span><span class="t">ki</span></li>
+      <li><span class="g">ካ</span><span class="t">ka</span></li>
+      <li><span class="g">ኬ</span><span class="t">ke</span></li>
+      <li><span class="g">ክ</span><span class="t">kə</span></li>
+      <li><span class="g">ኮ</span><span class="t">ko</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 18</span>
+      <span class="title">ኸ family</span>
+      <span class="save">save as <b>18</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኸ</span><span class="t">xä</span></li>
+      <li><span class="g">ኹ</span><span class="t">xu</span></li>
+      <li><span class="g">ኺ</span><span class="t">xi</span></li>
+      <li><span class="g">ኻ</span><span class="t">xa</span></li>
+      <li><span class="g">ኼ</span><span class="t">xe</span></li>
+      <li><span class="g">ኽ</span><span class="t">xə</span></li>
+      <li><span class="g">ኾ</span><span class="t">xo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 19</span>
+      <span class="title">ወ family</span>
+      <span class="save">save as <b>19</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ወ</span><span class="t">wä</span></li>
+      <li><span class="g">ዉ</span><span class="t">wu</span></li>
+      <li><span class="g">ዊ</span><span class="t">wi</span></li>
+      <li><span class="g">ዋ</span><span class="t">wa</span></li>
+      <li><span class="g">ዌ</span><span class="t">we</span></li>
+      <li><span class="g">ው</span><span class="t">wə</span></li>
+      <li><span class="g">ዎ</span><span class="t">wo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 20</span>
+      <span class="title">ዐ family</span>
+      <span class="save">save as <b>20</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ዐ</span><span class="t">ʿä</span></li>
+      <li><span class="g">ዑ</span><span class="t">ʿu</span></li>
+      <li><span class="g">ዒ</span><span class="t">ʿi</span></li>
+      <li><span class="g">ዓ</span><span class="t">ʿa</span></li>
+      <li><span class="g">ዔ</span><span class="t">ʿe</span></li>
+      <li><span class="g">ዕ</span><span class="t">ʿə</span></li>
+      <li><span class="g">ዖ</span><span class="t">ʿo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 21</span>
+      <span class="title">ዘ family</span>
+      <span class="save">save as <b>21</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ዘ</span><span class="t">zä</span></li>
+      <li><span class="g">ዙ</span><span class="t">zu</span></li>
+      <li><span class="g">ዚ</span><span class="t">zi</span></li>
+      <li><span class="g">ዛ</span><span class="t">za</span></li>
+      <li><span class="g">ዜ</span><span class="t">ze</span></li>
+      <li><span class="g">ዝ</span><span class="t">zə</span></li>
+      <li><span class="g">ዞ</span><span class="t">zo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 22</span>
+      <span class="title">ዠ family</span>
+      <span class="save">save as <b>22</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ዠ</span><span class="t">zhä</span></li>
+      <li><span class="g">ዡ</span><span class="t">zhu</span></li>
+      <li><span class="g">ዢ</span><span class="t">zhi</span></li>
+      <li><span class="g">ዣ</span><span class="t">zha</span></li>
+      <li><span class="g">ዤ</span><span class="t">zhe</span></li>
+      <li><span class="g">ዥ</span><span class="t">zhə</span></li>
+      <li><span class="g">ዦ</span><span class="t">zho</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 23</span>
+      <span class="title">የ family</span>
+      <span class="save">save as <b>23</b></span>
+    </header>
+    <ol>
+      <li><span class="g">የ</span><span class="t">yä</span></li>
+      <li><span class="g">ዩ</span><span class="t">yu</span></li>
+      <li><span class="g">ዪ</span><span class="t">yi</span></li>
+      <li><span class="g">ያ</span><span class="t">ya</span></li>
+      <li><span class="g">ዬ</span><span class="t">ye</span></li>
+      <li><span class="g">ይ</span><span class="t">yə</span></li>
+      <li><span class="g">ዮ</span><span class="t">yo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 24</span>
+      <span class="title">ደ family</span>
+      <span class="save">save as <b>24</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ደ</span><span class="t">dä</span></li>
+      <li><span class="g">ዱ</span><span class="t">du</span></li>
+      <li><span class="g">ዲ</span><span class="t">di</span></li>
+      <li><span class="g">ዳ</span><span class="t">da</span></li>
+      <li><span class="g">ዴ</span><span class="t">de</span></li>
+      <li><span class="g">ድ</span><span class="t">də</span></li>
+      <li><span class="g">ዶ</span><span class="t">do</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 25</span>
+      <span class="title">ጀ family</span>
+      <span class="save">save as <b>25</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ጀ</span><span class="t">jä</span></li>
+      <li><span class="g">ጁ</span><span class="t">ju</span></li>
+      <li><span class="g">ጂ</span><span class="t">ji</span></li>
+      <li><span class="g">ጃ</span><span class="t">ja</span></li>
+      <li><span class="g">ጄ</span><span class="t">je</span></li>
+      <li><span class="g">ጅ</span><span class="t">jə</span></li>
+      <li><span class="g">ጆ</span><span class="t">jo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 26</span>
+      <span class="title">ገ family</span>
+      <span class="save">save as <b>26</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ገ</span><span class="t">gä</span></li>
+      <li><span class="g">ጉ</span><span class="t">gu</span></li>
+      <li><span class="g">ጊ</span><span class="t">gi</span></li>
+      <li><span class="g">ጋ</span><span class="t">ga</span></li>
+      <li><span class="g">ጌ</span><span class="t">ge</span></li>
+      <li><span class="g">ግ</span><span class="t">gə</span></li>
+      <li><span class="g">ጎ</span><span class="t">go</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 27</span>
+      <span class="title">ጠ family</span>
+      <span class="save">save as <b>27</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ጠ</span><span class="t">t'ä</span></li>
+      <li><span class="g">ጡ</span><span class="t">t'u</span></li>
+      <li><span class="g">ጢ</span><span class="t">t'i</span></li>
+      <li><span class="g">ጣ</span><span class="t">t'a</span></li>
+      <li><span class="g">ጤ</span><span class="t">t'e</span></li>
+      <li><span class="g">ጥ</span><span class="t">t'ə</span></li>
+      <li><span class="g">ጦ</span><span class="t">t'o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 28</span>
+      <span class="title">ጨ family</span>
+      <span class="save">save as <b>28</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ጨ</span><span class="t">ch'ä</span></li>
+      <li><span class="g">ጩ</span><span class="t">ch'u</span></li>
+      <li><span class="g">ጪ</span><span class="t">ch'i</span></li>
+      <li><span class="g">ጫ</span><span class="t">ch'a</span></li>
+      <li><span class="g">ጬ</span><span class="t">ch'e</span></li>
+      <li><span class="g">ጭ</span><span class="t">ch'ə</span></li>
+      <li><span class="g">ጮ</span><span class="t">ch'o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 29</span>
+      <span class="title">ጰ family</span>
+      <span class="save">save as <b>29</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ጰ</span><span class="t">p'ä</span></li>
+      <li><span class="g">ጱ</span><span class="t">p'u</span></li>
+      <li><span class="g">ጲ</span><span class="t">p'i</span></li>
+      <li><span class="g">ጳ</span><span class="t">p'a</span></li>
+      <li><span class="g">ጴ</span><span class="t">p'e</span></li>
+      <li><span class="g">ጵ</span><span class="t">p'ə</span></li>
+      <li><span class="g">ጶ</span><span class="t">p'o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 30</span>
+      <span class="title">ጸ family</span>
+      <span class="save">save as <b>30</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ጸ</span><span class="t">ts'ä</span></li>
+      <li><span class="g">ጹ</span><span class="t">ts'u</span></li>
+      <li><span class="g">ጺ</span><span class="t">ts'i</span></li>
+      <li><span class="g">ጻ</span><span class="t">ts'a</span></li>
+      <li><span class="g">ጼ</span><span class="t">ts'e</span></li>
+      <li><span class="g">ጽ</span><span class="t">ts'ə</span></li>
+      <li><span class="g">ጾ</span><span class="t">ts'o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 31</span>
+      <span class="title">ፀ family</span>
+      <span class="save">save as <b>31</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ፀ</span><span class="t">ts'ä</span></li>
+      <li><span class="g">ፁ</span><span class="t">ts'u</span></li>
+      <li><span class="g">ፂ</span><span class="t">ts'i</span></li>
+      <li><span class="g">ፃ</span><span class="t">ts'a</span></li>
+      <li><span class="g">ፄ</span><span class="t">ts'e</span></li>
+      <li><span class="g">ፅ</span><span class="t">ts'ə</span></li>
+      <li><span class="g">ፆ</span><span class="t">ts'o</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 32</span>
+      <span class="title">ፈ family</span>
+      <span class="save">save as <b>32</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ፈ</span><span class="t">fä</span></li>
+      <li><span class="g">ፉ</span><span class="t">fu</span></li>
+      <li><span class="g">ፊ</span><span class="t">fi</span></li>
+      <li><span class="g">ፋ</span><span class="t">fa</span></li>
+      <li><span class="g">ፌ</span><span class="t">fe</span></li>
+      <li><span class="g">ፍ</span><span class="t">fə</span></li>
+      <li><span class="g">ፎ</span><span class="t">fo</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 33</span>
+      <span class="title">ፐ family</span>
+      <span class="save">save as <b>33</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ፐ</span><span class="t">pä</span></li>
+      <li><span class="g">ፑ</span><span class="t">pu</span></li>
+      <li><span class="g">ፒ</span><span class="t">pi</span></li>
+      <li><span class="g">ፓ</span><span class="t">pa</span></li>
+      <li><span class="g">ፔ</span><span class="t">pe</span></li>
+      <li><span class="g">ፕ</span><span class="t">pə</span></li>
+      <li><span class="g">ፖ</span><span class="t">po</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 34</span>
+      <span class="title">-wa forms (ሏ …)</span>
+      <span class="save">save as <b>34</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሏ</span><span class="t">lwa</span></li>
+      <li><span class="g">ሟ</span><span class="t">mwa</span></li>
+      <li><span class="g">ሷ</span><span class="t">swa</span></li>
+      <li><span class="g">ሯ</span><span class="t">rwa</span></li>
+      <li><span class="g">ቧ</span><span class="t">bwa</span></li>
+      <li><span class="g">ቷ</span><span class="t">twa</span></li>
+      <li><span class="g">ኗ</span><span class="t">nwa</span></li>
+    </ol>
+  </section>
+
+  <section class="take letters">
+    <header>
+      <span class="num">Take 35</span>
+      <span class="title">-wa forms (ቋ …)</span>
+      <span class="save">save as <b>35</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቋ</span><span class="t">qwa</span></li>
+      <li><span class="g">ኳ</span><span class="t">kwa</span></li>
+      <li><span class="g">ጓ</span><span class="t">gwa</span></li>
+      <li><span class="g">ዟ</span><span class="t">zwa</span></li>
+      <li><span class="g">ዷ</span><span class="t">dwa</span></li>
+      <li><span class="g">ጧ</span><span class="t">t'wa</span></li>
+      <li><span class="g">ፏ</span><span class="t">fwa</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 36</span>
+      <span class="title">Words 1–8</span>
+      <span class="save">save as <b>36</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሰላም</span><span class="t">sälam</span><span class="e">hello / peace</span></li>
+      <li><span class="g">ማይ</span><span class="t">may</span><span class="e">water</span></li>
+      <li><span class="g">ኣደ</span><span class="t">addä</span><span class="e">mother</span></li>
+      <li><span class="g">ኣቦ</span><span class="t">abbo</span><span class="e">father</span></li>
+      <li><span class="g">ልቢ</span><span class="t">ləbbi</span><span class="e">heart</span></li>
+      <li><span class="g">ባኒ</span><span class="t">bani</span><span class="e">bread</span></li>
+      <li><span class="g">ሰብ</span><span class="t">säb</span><span class="e">person</span></li>
+      <li><span class="g">ደም</span><span class="t">däm</span><span class="e">blood</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 37</span>
+      <span class="title">Words 9–16</span>
+      <span class="save">save as <b>37</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኣንበሳ</span><span class="t">anbäsa</span><span class="e">lion</span></li>
+      <li><span class="g">ንህቢ</span><span class="t">nəhbi</span><span class="e">bee</span></li>
+      <li><span class="g">ተመን</span><span class="t">tämän</span><span class="e">snake</span></li>
+      <li><span class="g">ዓዲ</span><span class="t">ʿaddi</span><span class="e">village / homeland</span></li>
+      <li><span class="g">ላም</span><span class="t">lam</span><span class="e">cow</span></li>
+      <li><span class="g">ስም</span><span class="t">səm</span><span class="e">name</span></li>
+      <li><span class="g">ሰለስተ</span><span class="t">sälästä</span><span class="e">three</span></li>
+      <li><span class="g">ኦም</span><span class="t">om</span><span class="e">tree</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 38</span>
+      <span class="title">Words 17–24</span>
+      <span class="save">save as <b>38</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኣስናን</span><span class="t">asnan</span><span class="e">teeth</span></li>
+      <li><span class="g">ቡን</span><span class="t">bun</span><span class="e">coffee</span></li>
+      <li><span class="g">ርእሲ</span><span class="t">rəʾsi</span><span class="e">head</span></li>
+      <li><span class="g">ኢድ</span><span class="t">id</span><span class="e">hand</span></li>
+      <li><span class="g">ድሙ</span><span class="t">dəmmu</span><span class="e">cat</span></li>
+      <li><span class="g">ስድራ</span><span class="t">sədra</span><span class="e">family</span></li>
+      <li><span class="g">ወዲ</span><span class="t">wädi</span><span class="e">boy / son</span></li>
+      <li><span class="g">መምህር</span><span class="t">mämhər</span><span class="e">teacher</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 39</span>
+      <span class="title">Words 25–32</span>
+      <span class="save">save as <b>39</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ብርሃን</span><span class="t">bərhan</span><span class="e">light</span></li>
+      <li><span class="g">ሓደ</span><span class="t">ḥadä</span><span class="e">one</span></li>
+      <li><span class="g">ሓወ</span><span class="t">ḥawä</span><span class="e">brother</span></li>
+      <li><span class="g">ሓዊ</span><span class="t">ḥawi</span><span class="e">fire</span></li>
+      <li><span class="g">ከተማ</span><span class="t">kätäma</span><span class="e">city</span></li>
+      <li><span class="g">ክልተ</span><span class="t">kəltä</span><span class="e">two</span></li>
+      <li><span class="g">መኪና</span><span class="t">mäkina</span><span class="e">car</span></li>
+      <li><span class="g">ከልቢ</span><span class="t">kälbi</span><span class="e">dog</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 40</span>
+      <span class="title">Words 33–40</span>
+      <span class="save">save as <b>40</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ሰማይ</span><span class="t">sämay</span><span class="e">sky</span></li>
+      <li><span class="g">ለይቲ</span><span class="t">läyti</span><span class="e">night</span></li>
+      <li><span class="g">ተምሃራይ</span><span class="t">tämharay</span><span class="e">student</span></li>
+      <li><span class="g">ሰበይቲ</span><span class="t">säbäyti</span><span class="e">woman</span></li>
+      <li><span class="g">ዓሳ</span><span class="t">ʿasa</span><span class="e">fish</span></li>
+      <li><span class="g">ዓይኒ</span><span class="t">ʿayni</span><span class="e">eye</span></li>
+      <li><span class="g">ዓሰርተ</span><span class="t">ʿasärtä</span><span class="e">ten</span></li>
+      <li><span class="g">መዓልቲ</span><span class="t">mäʿalti</span><span class="e">day</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 41</span>
+      <span class="title">Words 41–48</span>
+      <span class="save">save as <b>41</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኣርባዕተ</span><span class="t">arbaʿtä</span><span class="e">four</span></li>
+      <li><span class="g">ዓርኪ</span><span class="t">ʿarki</span><span class="e">friend</span></li>
+      <li><span class="g">ሃገር</span><span class="t">hagär</span><span class="e">country</span></li>
+      <li><span class="g">ኣድጊ</span><span class="t">adgi</span><span class="e">donkey</span></li>
+      <li><span class="g">ስጋ</span><span class="t">səga</span><span class="e">meat</span></li>
+      <li><span class="g">በጊዕ</span><span class="t">bägiʿ</span><span class="e">sheep</span></li>
+      <li><span class="g">ቐይሕ</span><span class="t">qhäyəḥ</span><span class="e">red</span></li>
+      <li><span class="g">ቆልዓ</span><span class="t">qolʿa</span><span class="e">child</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 42</span>
+      <span class="title">Words 49–56</span>
+      <span class="save">save as <b>42</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ኮኾብ</span><span class="t">koxob</span><span class="e">star</span></li>
+      <li><span class="g">ፈረስ</span><span class="t">färäs</span><span class="e">horse</span></li>
+      <li><span class="g">ኣፍ</span><span class="t">af</span><span class="e">mouth</span></li>
+      <li><span class="g">ሓፍቲ</span><span class="t">ḥafti</span><span class="e">sister</span></li>
+      <li><span class="g">ፍቕሪ</span><span class="t">fəqhri</span><span class="e">love</span></li>
+      <li><span class="g">ገዛ</span><span class="t">gäza</span><span class="e">house</span></li>
+      <li><span class="g">ሩዝ</span><span class="t">ruz</span><span class="e">rice</span></li>
+      <li><span class="g">ዝናብ</span><span class="t">zənab</span><span class="e">rain</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 43</span>
+      <span class="title">Words 57–64</span>
+      <span class="save">save as <b>43</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ገንዘብ</span><span class="t">gänzäb</span><span class="e">money</span></li>
+      <li><span class="g">ዘመድ</span><span class="t">zämäd</span><span class="e">relative</span></li>
+      <li><span class="g">እዝኒ</span><span class="t">əzni</span><span class="e">ear</span></li>
+      <li><span class="g">ጥዕና</span><span class="t">t'əʿna</span><span class="e">health</span></li>
+      <li><span class="g">ሻሂ</span><span class="t">shahi</span><span class="e">tea</span></li>
+      <li><span class="g">ሽኮር</span><span class="t">shəkkor</span><span class="e">sugar</span></li>
+      <li><span class="g">ሓሙሽተ</span><span class="t">ḥamushtä</span><span class="e">five</span></li>
+      <li><span class="g">ጀበና</span><span class="t">jäbäna</span><span class="e">coffee pot</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 44</span>
+      <span class="title">Words 65–72</span>
+      <span class="save">save as <b>44</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ትግርኛ</span><span class="t">təgrəñña</span><span class="e">Tigrinya (language)</span></li>
+      <li><span class="g">ጨው</span><span class="t">ch'äw</span><span class="e">salt</span></li>
+      <li><span class="g">ጫማ</span><span class="t">ch'amma</span><span class="e">shoe</span></li>
+      <li><span class="g">ጸባ</span><span class="t">ts'äba</span><span class="e">milk</span></li>
+      <li><span class="g">ጸሓይ</span><span class="t">ts'äḥay</span><span class="e">sun</span></li>
+      <li><span class="g">ጸሊም</span><span class="t">ts'älim</span><span class="e">black</span></li>
+      <li><span class="g">ጻዕዳ</span><span class="t">ts'aʿda</span><span class="e">white</span></li>
+      <li><span class="g">ጸጉሪ</span><span class="t">ts'äguri</span><span class="e">hair</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 45</span>
+      <span class="title">Words 73–80</span>
+      <span class="save">save as <b>45</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ማዕጾ</span><span class="t">maʿts'o</span><span class="e">door</span></li>
+      <li><span class="g">ዕዳጋ</span><span class="t">ʿədaga</span><span class="e">market</span></li>
+      <li><span class="g">ጸሎት</span><span class="t">ts'älot</span><span class="e">prayer</span></li>
+      <li><span class="g">ፓስታ</span><span class="t">pasta</span><span class="e">pasta</span></li>
+      <li><span class="g">ጠረጴዛ</span><span class="t">t'äräp'eza</span><span class="e">table</span></li>
+      <li><span class="g">ቴሌቪዥን</span><span class="t">televizhən</span><span class="e">television</span></li>
+      <li><span class="g">ሓኪም</span><span class="t">ḥakim</span><span class="e">doctor</span></li>
+      <li><span class="g">ወርሒ</span><span class="t">wärḥi</span><span class="e">moon</span></li>
+    </ol>
+  </section>
+
+  <section class="take words">
+    <header>
+      <span class="num">Take 46</span>
+      <span class="title">Words 81–82</span>
+      <span class="save">save as <b>46</b></span>
+    </header>
+    <ol>
+      <li><span class="g">ቋንቋ</span><span class="t">qwanqwa</span><span class="e">language</span></li>
+      <li><span class="g">ጓል</span><span class="t">gwal</span><span class="e">girl / daughter</span></li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>

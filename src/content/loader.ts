@@ -47,6 +47,15 @@ export function decompose(courseId: CourseId, word: string): ContentItem[] {
   return [...word].map((ch) => glyphItemByChar.get(ch)).filter((x): x is ContentItem => !!x);
 }
 
+/**
+ * What an item sounds like, for spotting options that can't be told apart by
+ * ear. In Amharic the first order sounds like the fourth (መ = ማ, ሀ = ሃ), so
+ * "mä" and "ma" share a key; letters that share a romanization (ሀ/ሐ/ኀ) already do.
+ */
+export function soundKey(courseId: CourseId, item: ContentItem): string {
+  return courseId === 'amharic' ? item.transliteration.replace(/ä$/, 'a') : item.transliteration;
+}
+
 /** Family keys a word touches — used to gate tier-3 word drills on family mastery. */
 export function familiesOf(courseId: CourseId, word: string): string[] {
   return [...new Set(decompose(courseId, word).map((g) => g.family_group!).filter(Boolean))];
